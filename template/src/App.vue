@@ -1,23 +1,22 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
     {{#router}}
     <router-view/>
     {{else}}
-    <HelloWorld/>
+    <Home/>
     {{/router}}
   </div>
 </template>
 
 <script>
 {{#unless router}}
-import HelloWorld from './components/HelloWorld'
+import Home from 'views/Home'
 
 {{/unless}}
 export default {
   name: 'App'{{#router}}{{else}},
   components: {
-    HelloWorld
+    Home
   }{{/router}}
 }
 </script>
